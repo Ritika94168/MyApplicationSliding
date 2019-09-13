@@ -1,22 +1,26 @@
 package com.example.myapplicationsliding;
 
 public class DataModel{
-    private String description;
-    private int imgId;
-    public DataModel(String description, int imgId) {
-        this.description = description;
-        this.imgId = imgId;
+    private String descriptiontop;
+    private String desc;
+    public DataModel(String description, String desc) {
+        this.descriptiontop = description;
+        this.desc = desc;
     }
-    public String getDescription() {
-        return description;
+
+    public String getDescriptiontop() {
+        return descriptiontop;
     }
-    public void setDescription(String description) {
-        this.description = description;
+
+    public void setDescriptiontop(String descriptiontop) {
+        this.descriptiontop = descriptiontop;
     }
-    public int getImgId() {
-        return imgId;
+
+    public String getDesc() {
+        return desc;
     }
-    public void setImgId(int imgId) {
-        this.imgId = imgId;
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

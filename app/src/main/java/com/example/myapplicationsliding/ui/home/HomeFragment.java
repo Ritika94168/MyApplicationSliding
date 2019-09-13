@@ -40,18 +40,8 @@ public class HomeFragment extends Fragment {
 
 
         DataModel[] myListData = new DataModel[] {
-                new DataModel("Email", android.R.drawable.ic_dialog_email),
-                new DataModel("Info", android.R.drawable.ic_dialog_info),
-                new DataModel("Delete", android.R.drawable.ic_delete),
-                new DataModel("Dialer", android.R.drawable.ic_dialog_dialer),
-                new DataModel("Alert", android.R.drawable.ic_dialog_alert),
-                new DataModel("Map", android.R.drawable.ic_dialog_map),
-                new DataModel("Email", android.R.drawable.ic_dialog_email),
-                new DataModel("Info", android.R.drawable.ic_dialog_info),
-                new DataModel("Delete", android.R.drawable.ic_delete),
-                new DataModel("Dialer", android.R.drawable.ic_dialog_dialer),
-                new DataModel("Alert", android.R.drawable.ic_dialog_alert),
-                new DataModel("Map", android.R.drawable.ic_dialog_map),
+                new DataModel("8000", "Todays Sale"),
+
         };
 
         RecyclerView recyclerView =root.findViewById(R.id.my_recycler_view);

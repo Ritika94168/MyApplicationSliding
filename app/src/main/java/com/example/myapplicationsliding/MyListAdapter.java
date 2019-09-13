@@ -30,12 +30,12 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final DataModel myListData = listdata[position];
-        holder.textView.setText(listdata[position].getDescription());
-        holder.imageView.setImageResource(listdata[position].getImgId());
+        holder.textView.setText(listdata[position].getDescriptiontop());
+        holder.textView.setText(listdata[position].getDesc());
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"click on item: "+myListData.getDescription(),Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(),"click on item: "+myListData.getDescriptiontop(),Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -47,13 +47,15 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView imageView;
+//        public ImageView imageView;
         public TextView textView;
+        public TextView textView1;
         public RelativeLayout relativeLayout;
         public ViewHolder(View itemView) {
             super(itemView);
-            this.imageView = (ImageView) itemView.findViewById(R.id.imageView);
-            this.textView = (TextView) itemView.findViewById(R.id.textView);
+
+            this.textView = (TextView) itemView.findViewById(R.id.textViewTitle);
+            this.textView1 = (TextView) itemView.findViewById(R.id.textViewShortDesc);
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayout);
         }
     }

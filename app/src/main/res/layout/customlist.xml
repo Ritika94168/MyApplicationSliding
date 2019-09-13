@@ -10,39 +10,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        card_view:cardCornerRadius="5dp"
+        card_view:cardCornerRadius="30dp"
         card_view:cardElevation="10dp"
         card_view:cardUseCompatPadding="true"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="96dp"
+            android:layout_height="123dp"
             android:padding="8dp"
 
             >
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:contentDescription="Icon" />
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:id="@+id/textViewTitle"
+                android:layout_width="186dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/imageView"
-                android:layout_toRightOf="@id/imageView"
-                android:gravity="center_vertical"
+                android:layout_below="@+id/textViewShortDesc"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="      Todays Sale"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                card_view:fontFamily="monospace" />
+
+            <TextView
+                android:id="@+id/textViewShortDesc"
+                android:layout_width="189dp"
+                android:layout_height="41dp"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="   8000 RS"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                card_view:fontFamily="monospace" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/img" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
