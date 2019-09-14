@@ -34,8 +34,8 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final DataModel myListData = listdata[position];
-        holder.textView.setText(listdata[position].getDescriptiontop());
-        holder.textView.setText(listdata[position].getDesc());
+        holder.textView.setText(myListData.getDescriptiontop());
+        holder.textView1.setText(myListData.getDesc());
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
