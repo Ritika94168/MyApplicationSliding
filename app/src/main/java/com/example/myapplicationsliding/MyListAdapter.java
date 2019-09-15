@@ -2,6 +2,7 @@ package com.example.myapplicationsliding;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,14 +12,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplicationsliding.ui.gallery.GalleryFragment;
 
 import static android.app.PendingIntent.getActivity;
 
 
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder>{
     private DataModel[] listdata;
-    Activity context;
+
     // RecyclerView recyclerView;
     public MyListAdapter(DataModel[] listdata) {
         this.listdata = listdata;
@@ -39,9 +44,19 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"click on item: "+myListData.getDescriptiontop(),Toast.LENGTH_LONG).show();
-//                Intent i = new Intent(context, DetailedActivity.class);
-//                context.startActivity(i);
+
+//                getActivity().onBackPressed();
+               Context context = view.getContext();
+//                context.finish();
+//               context.onb
+//                    Intent intent = new Intent(context, DetailedActivity.class);
+//                    context.startActivity(intent);
+//                Fragment someFragment = new GalleryFragment();
+//                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                transaction.replace(R.id.fragment_container, someFragment ); // give your fragment container id in first parameter
+//                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
+//                transaction.commit();
+
             }
         });
     }
