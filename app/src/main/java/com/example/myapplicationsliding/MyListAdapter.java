@@ -2,30 +2,25 @@ package com.example.myapplicationsliding;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.myapplicationsliding.ui.gallery.GalleryFragment;
 
 import static android.app.PendingIntent.getActivity;
 
 
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder>{
     private DataModel[] listdata;
+    Activity context;
 
     // RecyclerView recyclerView;
-    public MyListAdapter(DataModel[] listdata) {
+    public MyListAdapter(Activity context, DataModel[] listdata) {
+        this.context = context;
         this.listdata = listdata;
     }
     @Override
@@ -44,18 +39,27 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+//                Log.d("gfgfgfgf","kjkjjkj");
 //                getActivity().onBackPressed();
 //               Context context = view.getContext();
-////                context.finish();
-////               context.onb
-//                    Intent intent = new Intent(context, DetailedActivity.class);
-//                    context.startActivity(intent);
-//                Fragment someFragment = new GalleryFragment();
-//                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//                transaction.replace(R.id.fragment_container, someFragment ); // give your fragment container id in first parameter
+context.finish();
+                    Intent intent = new Intent(context, DetailedActivity.class);
+                    context.startActivity(intent);
+//                                            Fragment someFragment = new GalleryFragment();
+////                Fragment fragment = new projectInformationFragment();
+//                FragmentTransaction transaction =
+//                       getChildFragmentManager();
+//                transaction.replace(R.id.text_gallery, someFragment ); // give your fragment container id in first parameter
 //                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
 //                transaction.commit();
+
+
+
+//                NextFragment nextFrag= new NextFragment();
+//               context.getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.Layout_container, nextFrag, "findThisFragment")
+//                        .addToBackStack(null)
+//                        .commit();
 
             }
         });

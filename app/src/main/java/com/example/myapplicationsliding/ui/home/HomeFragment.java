@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -27,6 +28,7 @@ import com.example.myapplicationsliding.MyListAdapter;
 import com.example.myapplicationsliding.R;
 import com.example.myapplicationsliding.Server.MultipartUtility;
 import com.example.myapplicationsliding.Server.ServerConstants;
+import com.example.myapplicationsliding.ui.gallery.GalleryFragment;
 
 
 import org.json.JSONObject;
@@ -49,7 +51,7 @@ public class HomeFragment extends Fragment {
 //                ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         new HomeFragment.InsertLogoutinfo().execute(ServerConstants.TEST);
-        Toast.makeText(getActivity(),"vvvv"+value,Toast.LENGTH_LONG).show();
+//        Toast.makeText(getActivity(),"vvvv"+value,Toast.LENGTH_LONG).show();
 //        DataModel[] myListData = new DataModel[] {
 //                new DataModel(value, "Todays Sale"),
 //                new DataModel("8000", "Total IPD"),
@@ -61,6 +63,18 @@ public class HomeFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("","kjkjjkj");
+//                Toast.makeText(getActivity(),"ritika",Toast.LENGTH_LONG).show();
+//                Fragment someFragment = new GalleryFragment();
+//                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                transaction.replace(R.id.text_gallery, someFragment ); // give your fragment container id in first parameter
+//                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
+//                transaction.commit();MyListAdapter
+            }
+        });
 
 //        final TextView textView = root.findViewById(R.id.text_home);
 //        homeViewModel.getText().observe(this, new Observer<String>() {
@@ -158,7 +172,7 @@ public class HomeFragment extends Fragment {
                             new DataModel("8000", "Todays OPD"),
                     };
 
-                    MyListAdapter adapter = new MyListAdapter(myListData);
+                    MyListAdapter adapter = new MyListAdapter(getActivity(),myListData);
                     recyclerView.setAdapter(adapter);
 
 //                    recyclerView.se
