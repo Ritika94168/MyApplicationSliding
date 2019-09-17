@@ -46,9 +46,9 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             public void onClick(View view) {
 
 //                getActivity().onBackPressed();
-               Context context = view.getContext();
-//                context.finish();
-//               context.onb
+//               Context context = view.getContext();
+////                context.finish();
+////               context.onb
 //                    Intent intent = new Intent(context, DetailedActivity.class);
 //                    context.startActivity(intent);
 //                Fragment someFragment = new GalleryFragment();
