@@ -67,7 +67,7 @@ public class DetailedActivity extends AppCompatActivity {
                     @Override
                     public void run() {
 //	                        pDialog.cancel();
-                        Toast.makeText(getApplicationContext(),"Connection Error",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext()," Error",Toast.LENGTH_LONG).show();
 
                     }
                 });
