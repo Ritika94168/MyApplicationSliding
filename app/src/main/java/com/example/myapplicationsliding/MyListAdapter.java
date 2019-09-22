@@ -2,6 +2,7 @@ package com.example.myapplicationsliding;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import static android.app.PendingIntent.getActivity;
@@ -16,12 +18,11 @@ import static android.app.PendingIntent.getActivity;
 
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder>{
     private DataModel[] listdata;
-    Activity context;
-
+Activity context;
     // RecyclerView recyclerView;
-    public MyListAdapter(Activity context, DataModel[] listdata) {
-        this.context = context;
+    public MyListAdapter(FragmentActivity activity, DataModel[] listdata) {
         this.listdata = listdata;
+        this.context=activity;
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -39,31 +40,23 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Log.d("gfgfgfgf","kjkjjkj");
+
 //                getActivity().onBackPressed();
 //               Context context = view.getContext();
-context.finish();
+                context.finish();
+//               context.onb
                     Intent intent = new Intent(context, DetailedActivity.class);
                     context.startActivity(intent);
-//                                            Fragment someFragment = new GalleryFragment();
-////                Fragment fragment = new projectInformationFragment();
-//                FragmentTransaction transaction =
-//                       getChildFragmentManager();
-//                transaction.replace(R.id.text_gallery, someFragment ); // give your fragment container id in first parameter
+//                Fragment someFragment = new GalleryFragment();
+//                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                transaction.replace(R.id.fragment_container, someFragment ); // give your fragment container id in first parameter
 //                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
 //                transaction.commit();
-
-
-
-//                NextFragment nextFrag= new NextFragment();
-//               context.getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.Layout_container, nextFrag, "findThisFragment")
-//                        .addToBackStack(null)
-//                        .commit();
 
             }
         });
     }
+
 
 
     @Override

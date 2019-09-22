@@ -22,12 +22,11 @@ public class DisplayList {
 
 
     // Constructor that is used to create an instance of the Movie object
-    public DisplayList(String sales_date, String auto_number, int amount, String canceled_amount) {
+    public DisplayList(String sales_date, String amount, String canceled_amount) {
 
         this.sales_date = sales_date;
 //        this.stationId = stationId;
 //        this.categoryId = categoryId;
-        this.auto_number=Integer.toString(auto_number);
         this.amount=amount;
         this.canceled_amount=canceled_amount;
 
@@ -42,13 +41,7 @@ public class DisplayList {
         this.sales_date = sales_date;
     }
 
-    public String getAuto_number() {
-        return auto_number;
-    }
 
-    public void setAuto_number(String auto_number) {
-        this.auto_number = auto_number;
-    }
 
     public String getAmount() {
         return amount;

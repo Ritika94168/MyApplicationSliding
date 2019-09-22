@@ -96,7 +96,7 @@ public class CustomListAdapter extends BaseAdapter implements Filterable {
                     for (int i = 0; i < reportsDataOriginal.size(); i++) {
                         DisplayList model = reportsDataOriginal.get(i);
 
-                        String data = model.getAuto_number();
+                        String data = model.getAmount();
                         if (data.toLowerCase(locale).contains(constraint.toString())) {
                             FilteredArrList.add(model);
                         }
@@ -135,9 +135,9 @@ public class CustomListAdapter extends BaseAdapter implements Filterable {
             holder = new ViewHolder();
             holder.sales_date = (TextView) convertView.findViewById(R.id.sales_date);
             holder.amount = (TextView) convertView.findViewById(R.id.amount);
-            holder.canceled_amount = (TextView) convertView.findViewById(R.id.cancelledamount);
+            holder.canceled_amount = (TextView) convertView.findViewById(R.id.cancelled_amount);
 
-            holder.auto_number = (TextView) convertView.findViewById(R.id.auto_number);
+//            holder.auto_number = (TextView) convertView.findViewById(R.id.auto_number);
 //            holder.product_type = (TextView) convertView.findViewById(R.id.product_type);
             convertView.setTag(holder);
         }
@@ -150,7 +150,8 @@ public class CustomListAdapter extends BaseAdapter implements Filterable {
         holder.amount.setText(medicineListModel.getAmount());
         holder.canceled_amount.setText(medicineListModel.getCanceled_amount());
 
-        holder.auto_number.setText(medicineListModel.getAuto_number());
+//        holder.auto_number.setText(medicineListModel.getAuto_number());
+//        holder.product_type.setText(medicineListModel.getProduct_type());
 //        holder.product_type.setText(medicineListModel.getProduct_type());
         return convertView;
     }
