@@ -42,7 +42,20 @@
 
 
                 card_view:fontFamily="monospace" />
+            <TextView
+                android:id="@+id/sales_minus"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewShortDesc"
+                android:layout_marginLeft="170dp"
 
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#009688"
+
+
+                card_view:fontFamily="monospace" />
             <TextView
                 android:id="@+id/sales_date3"
                 android:layout_width="180dp"
@@ -80,7 +93,34 @@
                 android:layout_marginTop="100dp"
                 android:text="23/9/2019"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="#000000"
+                android:textColor="#009688"
+                android:textStyle="bold"
+                card_view:fontFamily="monospace" />
+            <TextView
+                android:id="@+id/salesl"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewShortDesc"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="80dp"
+                android:text="Total Sale"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#009688"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                card_view:fontFamily="monospace" />
+
+            <TextView
+                android:id="@+id/sales_amount"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewShortDesc"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="100dp"
+                android:text="43000"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#009688"
                 android:textStyle="bold"
                 card_view:fontFamily="monospace" />
 
@@ -92,6 +132,10 @@
 
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_toStartOf="@+id/cancelled_amount"
+                android:layout_toLeftOf="@+id/cancelled_amount"
                 android:text="   45000 RS"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textStyle="bold"
